@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%; /* Ensure the body takes full height */
+}
+
+body {
+  font-family: "Josefin Sans", "PT Sans", "Ropa Sans", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f7fa;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column; /* Ensure the body flexes to contain all content */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #1c1c1c;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.navbar-brand a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 15px;
+  font-size: 1rem;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 10%;
+  background: linear-gradient(to bottom, #1c1c1c, #333);
+  color: #fff;
+  flex-grow: 1; /* Make the hero section fill available space */
+}
+
+.hero-content {
+  max-width: 600px;
+  margin-bottom: 30px;
+  text-align: center; /* Center text for smaller screens */
+}
+
+.greeting {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #f5c518;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  color: #f5c518;
+  margin-bottom: 20px;
+}
+
+.hero .description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  padding: 10px 20px;
+  background-color: #f5c518;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.hero .btn:hover {
+  background-color: #333;
+  color: #f5c518;
+}
+
+.hero-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid #e2e2e2;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .hero-image img {
+    margin: 0 auto; /* Center image */
+  }
+}
+
+/* Footer */
+.footer {
+  padding: 16px 10%;
+  background-color: #1c1c1c;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: auto; /* Push footer to the bottom if content is less */
+}
+
+/* Styles for iPad Pro (1024px width) */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center-align text for a balanced look */
+    padding: 120px 5%; /* Adjust padding for better spacing */
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-image img {
+    margin: 0 auto; /* Center the image */
+    width: 300px; /* Slightly smaller image */
+    height: 300px;
+  }
+}
+
+/* Styles for iPad Mini (820px width) */
+@media (max-width: 820px) {
+  .hero {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+    padding: 40px 10%; /* Adjust padding */
+  }
+
+  .hero h1 {
+    font-size: 2.2rem; /* Smaller heading for mini screens */
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-image img {
+    margin: 0 auto;
+  }
+}
