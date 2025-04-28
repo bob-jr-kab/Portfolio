@@ -7,7 +7,7 @@
 
 html,
 body {
-  height: 100%; /* Ensure the body takes full height */
+  height: 100vh; /* Ensure the body takes full height */
 }
 
 body {
@@ -51,7 +51,12 @@ body {
 .navbar-links a:hover {
   text-decoration: underline;
 }
-
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
 /* Hero Section */
 .hero {
   display: flex;
